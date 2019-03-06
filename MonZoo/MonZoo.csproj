@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8773B509-3956-4710-86EF-EA95AF46B38D}</ProjectGuid>
+    <ProjectGuid>{92DD9D1A-7BCF-4B60-AE51-509DD9663A13}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BattleFieldReboot</RootNamespace>
-    <AssemblyName>BattleFieldReboot</AssemblyName>
+    <RootNamespace>MonZoo</RootNamespace>
+    <AssemblyName>MonZoo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>BattleFieldReboot.ProgramObjet</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,19 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GradeArmee.cs" />
+    <Compile Include="Animaux\Animal.cs" />
+    <Compile Include="Animaux\Elephant.cs" />
+    <Compile Include="Animaux\Sexe.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgramObjet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Animaux\Tigre.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MonJeuBattleField\MonJeuBattleField.csproj">
-      <Project>{417a1f86-6978-4fb6-a240-5707324f5091}</Project>
-      <Name>MonJeuBattleField</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

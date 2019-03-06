@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8773B509-3956-4710-86EF-EA95AF46B38D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>BattleFieldReboot</RootNamespace>
-    <AssemblyName>BattleFieldReboot</AssemblyName>
+    <ProjectGuid>{417A1F86-6978-4FB6-A240-5707324F5091}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonJeuBattleField</RootNamespace>
+    <AssemblyName>MonJeuBattleField</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,16 +23,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>BattleFieldReboot.ProgramObjet</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,19 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GradeArmee.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="ProgramObjet.cs" />
+    <Compile Include="Jeu\Arme.cs" />
+    <Compile Include="Jeu\Armes\FamasArme.cs" />
+    <Compile Include="Jeu\Armes\SniperArme.cs" />
+    <Compile Include="Jeu\Armes\UziArme.cs" />
+    <Compile Include="Jeu\Avatar.cs" />
+    <Compile Include="Jeu\Grade.cs" />
+    <Compile Include="Jeu\Grades\CaporalGrade.cs" />
+    <Compile Include="Jeu\Grades\GeneralGrade.cs" />
+    <Compile Include="Jeu\Grades\SoldatGrade.cs" />
+    <Compile Include="Jeu\Joueur.cs" />
+    <Compile Include="Jeu\MoteurDuJeu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MonJeuBattleField\MonJeuBattleField.csproj">
-      <Project>{417a1f86-6978-4fb6-a240-5707324f5091}</Project>
-      <Name>MonJeuBattleField</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
